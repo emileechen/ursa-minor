@@ -1,10 +1,12 @@
 
-
-// Returns array of intersecting objects.
-function intersection(arr1, arr2) {
-	return arr1.filter(function(n) {
-		return arr2.includes(n);
+function intersection(transcript, reqs) {
+	return transcript.filter(function(n) {
+		return reqs.includes(n.class);
 	});
+}
+
+function showDecimalPlaces(num, places) {
+	return num.toFixed(Math.max(places, (num.toString().split('.')[1] || []).length));
 }
 
 function letterGradeToGPA(letter) {
@@ -25,24 +27,51 @@ function letterGradeToGPA(letter) {
 	return gpa[letter];
 }
 
+function calcualateGPA(classes) {
+	sum = 0;
+	for (i = 0; i < classes.length; i++) {
+		sum += classes[i].grade;
+	}
+	return sum / classes.length;
+}
+
 
 function potentialMinors(list) {
-	return "hi";
+	for (var minor in minors) {
+		// Checks if property is specific to this class, and not one inherited from the base class
+		if (minors.hasOwnProperty(minor)) {
+			minorStatus(list, minor);
+		}
+	}
+	return "u go glen coco";
 }
 
 function minorStatus(classesTaken, minor) {
 	m = minors[minor];
 	console.log("Checking your status for the " + m.full + " minor.");
 
+	usefulClasses = [];
+
 	// Loop through and check every category of courses
 	for (i = 0; i < m.reqs.length; i++) {
-		usefulClasses = intersection(m.reqs[i].courses, classesTaken);
-		if (usefulClasses.length >= m.reqs[i].num) {
+		potentialClasses = intersection(classesTaken, m.reqs[i].courses);
+		if (potentialClasses.length >= m.reqs[i].num) {
 			console.log("You've taken all the classes for the " + m.reqs[i].name + " requirement!");
 		} else {
-			console.log("You've taken " + usefulClasses.length + "/" + m.reqs[i].num + " classes for the " + m.reqs[i].name + " requirement.");
+			console.log("You've taken " + potentialClasses.length + "/" + m.reqs[i].num + " classes for the " + m.reqs[i].name + " requirement.");
 		}
+
+		// Check to make sure you're not using a class twice somewhere???
+
+		usefulClasses = usefulClasses.concat(potentialClasses);
 	}
+
+	// Check if there is a gpa requirement
+	if (m.gpa) {
+		console.log("There is a GPA requirement of " + showDecimalPlaces(m.gpa, 1) + ".");
+		console.log("You have a GPA of " + showDecimalPlaces(calcualateGPA(usefulClasses), 1) + ".");
+	}
+
 	return "classes left to take";
 }
 

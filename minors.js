@@ -1,6 +1,6 @@
 
 
-minors = {
+var minors = {
 	"ART": {
 		"full": "Art Practice",
 		"reqs": [
@@ -46,5 +46,23 @@ minors = {
 			}
 		]
 	}
-}
+};
+
+
+var myTranscript = [
+				{	"class": 	"ART 8",
+					"grade": 	3.0
+				},
+				{	"class": 	"ART 12",
+					"grade": 	3.3
+				},
+				{	"class": 	"ART 14",
+					"grade": 	4.0
+				},
+				{	"class": 	"COMPSCI 188",
+					"grade": 	4.0
+				}
+			];
+
+
 
