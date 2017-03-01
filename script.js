@@ -46,6 +46,17 @@ function potentialMinors(list) {
 	return "u go glen coco";
 }
 
+function parseSummary(str) {
+	return str.split("\n");
+}
+
+
+
+
+
+
+
+
 function minorStatus(classesTaken, minor) {
 	m = minors[minor];
 	console.log("Checking your status for the " + m.full + " minor.");
@@ -69,7 +80,9 @@ function minorStatus(classesTaken, minor) {
 	// Check if there is a gpa requirement
 	if (m.gpa) {
 		console.log("There is a GPA requirement of " + showDecimalPlaces(m.gpa, 1) + ".");
-		console.log("You have a GPA of " + showDecimalPlaces(calcualateGPA(usefulClasses), 1) + ".");
+		if (usefulClasses.length > 0) {
+			console.log("You have a GPA of " + showDecimalPlaces(calcualateGPA(usefulClasses), 1) + ".");
+		}
 	}
 
 	return "classes left to take";

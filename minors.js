@@ -45,11 +45,47 @@ var minors = {
 
 			}
 		]
+	},
+	"PHYSICS": {
+		"full": "Physics",
+		"gpa": 2.0,
+		"reqs": [
+			{	"name": "Physics 5 or 7 Series",
+				"courses": ["PHYSICS 5A", "PHYSICS 5B", "PHYSICS 5C",
+							"PHYSICS 7A", "PHYSICS 7B", "PHYSICS 7C"],
+				"num": 3
+			},
+			{	"name": "Lower Division Math",
+				"courses": ["MATH 1A", "MATH 1B", "MATH 53", "PHYSICS 89"],
+				"num": 4
+			},
+			{	"name": "Physics 137A",
+				"courses": ["PHYSICS 137A"],
+				"num": 1
+			},
+			{	"name": "Physics 110A or Physics 105",
+				"courses": ["PHYSICS 110A", "PHYSICS 105"],
+				"num": 1
+			},
+			{	"name": "Upper Division",
+				"courses": ["PHYSICS 110B", "PHYSICS 111A", "PHYSICS 111B", "PHYSICS 112", "PHYSICS 129",
+							"PHYSICS 130", "PHYSICS 137A", "PHYSICS 137B", "PHYSICS 138", "PHYSICS 139",
+							"PHYSICS 141A", "PHYSICS 141B", "PHYSICS 142",
+							"PHYSICS C161"],
+				"num": 3
+			},
+		]
 	}
 };
 
 
 var myTranscript = [
+				{	"class": 	"MATH 1A",
+					"grade": 	4.0
+				},
+				{	"class": 	"MATH 1B",
+					"grade": 	4.0
+				},
 				{	"class": 	"ART 8",
 					"grade": 	3.0
 				},
@@ -61,8 +97,31 @@ var myTranscript = [
 				},
 				{	"class": 	"COMPSCI 188",
 					"grade": 	4.0
+				},
+				{	"class": 	"COMPSCI 189",
+					"grade": 	3.7
+				},
+				{	"class": 	"PHYSICS 7A",
+					"grade": 	3.3
 				}
 			];
+
+
+
+var meh = `Spring 2017	
+Class	Title	Un.	Gr.
+ART 180	Advanced Digital Photography	4.0	—
+COMPSCI 284B	Advanced Computer Graphics Algorithms and Techniques	4.0	—
+HISTART 192G	Undergraduate Seminar: Problems in Research and Interpretation: Undergraduate Seminar: American Art, Architecture, and Design	4.0	—
+NWMEDIA 190	Special Topics in New Media	4.0	—
+Fall 2016
+Class	Title	Un.	Gr.
+COMPSCI 194	Special Topics	4.0	B+
+EL ENG 16A	Designing Information Devices and Systems I	4.0	B+
+ESPM 155AC	Sociology and Political Ecology of Agro-Food Systems	4.0	P
+HISTORY 138	History of Science in the U.S.	4.0	P`;
+
+
 
 
 
