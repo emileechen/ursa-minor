@@ -46,6 +46,27 @@ var minors = {
 			}
 		]
 	},
+	"EPS": {
+		"full": "Earth and Planetary Sciences",
+		"gpa": 2.0,
+		"reqs": [
+			{	"name": "Lower Division",
+				"courses": ["EPS 50"],
+				"num": 1
+			},
+			{	"name": "Upper Division",
+				"courses": ["EPS 102", "EPS 104", "EPS C180", "EPS C181", "EPS C182", "EPS C183", "EPS 230",
+							"GEOG 142", "GEOG 143", "ENERES 102", "CIVENG 107", "CIVENG 108",
+							"EPS 100A", "EPS 100B", "EPS C100", "EPS 103", "EPS 105", "EPS 109", "EPS 115", "EPS 117", "EPS 131",
+							"EPS C141", "EPS C146", "EPS 170AC", "EPS C178", "EPS 180", "EPS 185",
+							"EPS 101", "EPS 102", "EPS 107", "EPS 108", "EPS 116", "EPS 118", "EPS C178",
+							"INTEGBI 106", "INTEGBI 106A", "INTEGBI 158LF",
+							"EPS C120", "EPS C120L", "EPS 122", "EPS 130",
+							"MATH 121A", "EPS C162"],
+				"num": 5
+			}
+		]
+	},
 	"IEOR": {
 		"full": "Industrial Engineering and Operations Research",
 		"gpa": 2.0,
@@ -82,13 +103,13 @@ var minors = {
 				"num": 4
 			},
 			{	"name": "Upper Division",
-				"courses": ["MATH 104", "MATH H104", "MATH 110", "MATH 113", "MATH 185"],
+				"courses": ["MATH 104", "MATH H104", "MATH 110", "MATH H110", "MATH 113", "MATH 185"],
 				"num": 4
 			},
 			{	"name": "Upper Division Elective",
-				"courses": ["MATH C103", "MATH 115", "MATH 121B", "MATH 126", "MATH 128A", "MATH 128B",
-							"MATH 135", "MATH 136", "MATH 140", "MATH 142",
-							"MATH 151", "MATH 153", "MATH 160", "MATH 170", "MATH 172"],
+				"courses": ["MATH C103", "MATH 115", "MATH 121A", "MATH 121B", "MATH 123", "MATH 125A", "MATH 126", "MATH 127", "MATH 128A", "MATH 128B",
+							"MATH 130", "MATH 135", "MATH 136", "MATH 140", "MATH 141", "MATH 142", "MATH 143",
+							"MATH 151", "MATH 152", "MATH 153", "MATH 160", "MATH 170", "MATH 172"],
 				"num": 1
 			}
 		]
