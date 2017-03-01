@@ -80,46 +80,46 @@ var minors = {
 
 
 var myTranscript = [
-				{	"class": 	"MATH 1A",
+				{	"name": 	"MATH 1A",
 					"grade": 	4.0
 				},
-				{	"class": 	"MATH 1B",
+				{	"name": 	"MATH 1B",
 					"grade": 	4.0
 				},
-				{	"class": 	"ART 8",
+				{	"name": 	"ART 8",
 					"grade": 	3.0
 				},
-				{	"class": 	"ART 12",
+				{	"name": 	"ART 12",
 					"grade": 	3.3
 				},
-				{	"class": 	"ART 14",
+				{	"name": 	"ART 14",
 					"grade": 	4.0
 				},
-				{	"class": 	"COMPSCI 188",
+				{	"name": 	"COMPSCI 188",
 					"grade": 	4.0
 				},
-				{	"class": 	"COMPSCI 189",
+				{	"name": 	"COMPSCI 189",
 					"grade": 	3.7
 				},
-				{	"class": 	"PHYSICS 7A",
+				{	"name": 	"PHYSICS 7A",
 					"grade": 	3.3
 				}
 			];
 
 
 
-var meh = `Spring 2017	
+var meh = `Spring 2017
 Class	Title	Un.	Gr.
 ART 180	Advanced Digital Photography	4.0	—
 COMPSCI 284B	Advanced Computer Graphics Algorithms and Techniques	4.0	—
 HISTART 192G	Undergraduate Seminar: Problems in Research and Interpretation: Undergraduate Seminar: American Art, Architecture, and Design	4.0	—
 NWMEDIA 190	Special Topics in New Media	4.0	—
-Fall 2016
+Spring 2016
 Class	Title	Un.	Gr.
-COMPSCI 194	Special Topics	4.0	B+
-EL ENG 16A	Designing Information Devices and Systems I	4.0	B+
-ESPM 155AC	Sociology and Political Ecology of Agro-Food Systems	4.0	P
-HISTORY 138	History of Science in the U.S.	4.0	P`;
+ART 8	Introduction to Visual Thinking	4.0	A
+ART W23AC	Data Arts	4.0	A
+ART 123	The Language of Printmaking-Screenprinting	4.0	A
+COMPSCI 189	Introduction to Machine Learning	4.0	B+`;
 
 
 

@@ -1,7 +1,15 @@
 
+class Course {
+	constructor(name, grade) {
+		this.name = name;
+		this.grade = letterGradeToGPA(grade);
+	}
+}
+
+
 function intersection(transcript, reqs) {
 	return transcript.filter(function(n) {
-		return reqs.includes(n.class);
+		return reqs.includes(n.name);
 	});
 }
 
@@ -36,6 +44,25 @@ function calcualateGPA(classes) {
 }
 
 
+
+function parseSummary(str) {
+	tmp = str.split("\n");
+	classesTaken = [];
+	for (i = 0; i < tmp.length; i++) {
+		t = (tmp[i].split("	"));
+		if (!t[0].includes("Spring ") && !t[0].includes("Fall ") && !t[0].includes("Summer ")
+				&& !t[0].includes("Class")) {
+			var course = new Course(t[0], t[3]);
+			classesTaken.push(course);
+		}
+	}
+	return classesTaken;
+}
+
+
+
+
+
 function potentialMinors(list) {
 	for (var minor in minors) {
 		// Checks if property is specific to this class, and not one inherited from the base class
@@ -46,17 +73,6 @@ function potentialMinors(list) {
 	return "u go glen coco";
 }
 
-function parseSummary(str) {
-	return str.split("\n");
-}
-
-
-
-
-
-
-
-
 function minorStatus(classesTaken, minor) {
 	m = minors[minor];
 	console.log("Checking your status for the " + m.full + " minor.");
@@ -66,6 +82,7 @@ function minorStatus(classesTaken, minor) {
 	// Loop through and check every category of courses
 	for (i = 0; i < m.reqs.length; i++) {
 		potentialClasses = intersection(classesTaken, m.reqs[i].courses);
+
 		if (potentialClasses.length >= m.reqs[i].num) {
 			console.log("You've taken all the classes for the " + m.reqs[i].name + " requirement!");
 		} else {
@@ -87,4 +104,5 @@ function minorStatus(classesTaken, minor) {
 
 	return "classes left to take";
 }
+
 
