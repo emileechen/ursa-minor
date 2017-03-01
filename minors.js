@@ -46,6 +46,53 @@ var minors = {
 			}
 		]
 	},
+	"IEOR": {
+		"full": "Industrial Engineering and Operations Research",
+		"gpa": 2.0,
+		"reqs": [
+			{	"name": "IEOR 172 or STAT 134",
+				"courses": ["IEOR 172", "STAT 134"],
+				"num": 1
+			},
+			{	"name": "IEOR 165 or STAT 135",
+				"courses": ["IEOR 165", "STAT 135"],
+				"num": 1
+			},
+			{	"name": "IEOR 160 or IEOR 162",
+				"courses": ["IEOR 160", "IEOR 162"],
+				"num": 1
+			},
+			{	"name": "IEOR 131, 161, or 166",
+				"courses": ["IEOR 131", "IEOR 161", "IEOR 166"],
+				"num": 1
+			},
+			{	"name": "2 Upper Division Classes",
+				"courses": ["IEOR 115", "IEOR 130", "IEOR 150", "IEOR 151", "IEOR 153",
+							"IEOR 170", "IEOR 171"],
+				"num": 2
+			}
+		]
+	},
+	"MATH": {
+		"full": "Mathematics",
+		"gpa": 2.0,
+		"reqs": [
+			{	"name": "Lower Division",
+				"courses": ["MATH 1A", "MATH 1B", "MATH 53", "MATH 54"],
+				"num": 4
+			},
+			{	"name": "Upper Division",
+				"courses": ["MATH 104", "MATH H104", "MATH 110", "MATH 113", "MATH 185"],
+				"num": 4
+			},
+			{	"name": "Upper Division Elective",
+				"courses": ["MATH C103", "MATH 115", "MATH 121B", "MATH 126", "MATH 128A", "MATH 128B",
+							"MATH 135", "MATH 136", "MATH 140", "MATH 142",
+							"MATH 151", "MATH 153", "MATH 160", "MATH 170", "MATH 172"],
+				"num": 1
+			}
+		]
+	},
 	"PHYSICS": {
 		"full": "Physics",
 		"gpa": 2.0,
